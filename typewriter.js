@@ -1,12 +1,13 @@
-const sentence = 'And can you offer me proof of your existence?\n'
-let time = 0;
+const sentence = 'And can you offer me proof of your existence?'
+// let time = 0;
 
-const eachChar = (sentence) => {
+const eachChar = (sentence, time) => {
  for (const letter of sentence) {
    time += 50;
-   setTimeout(() => {process.stdout.write(letter)}, time)
+   setTimeout(() => {process.stdout.write(letter)}, time);
  }
+ setTimeout(() => {console.log('\n')}, time)
 }
 
-setTimeout(() => {eachChar(sentence)},)
+eachChar(sentence, 2000);
 
